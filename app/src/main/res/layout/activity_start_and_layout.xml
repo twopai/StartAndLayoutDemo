@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hs.startandlayoutdemo.StartAndLayoutActivity">
+
+    <com.hs.startandlayoutdemo.StartAndLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/continuationLinear"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:background="@drawable/mesearchopenmapshape"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/continuation" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pauseLinear"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:background="@drawable/mesearchopenmapshape"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/pauseImg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/stop" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/finishLinear"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:background="@drawable/mesearchopenmapshape"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/finish" />
+        </LinearLayout>
+    </com.hs.startandlayoutdemo.StartAndLayout>
+
+</RelativeLayout>
