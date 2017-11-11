@@ -73,7 +73,6 @@ public class StartAndLayout extends RelativeLayout {
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
         mPauseButton.setX(mCenterXTwo-mPauseButton.getMeasuredWidth()/2);
-        mPauseButton.requestLayout();//此方法很重要，刷新位置，不设置，控件不会动
 
         mStartButton.setTag(START_TAG);
         mPauseButton.setTag(PAUSE_TAG);
@@ -122,7 +121,6 @@ public class StartAndLayout extends RelativeLayout {
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 float animatedValue = (float) valueAnimator.getAnimatedValue();
                 mStartButton.setX(animatedValue);
-                mStartButton.requestLayout();
                 if (animatedValue == mPauseX) {
                     showPauseButton();
                 }
@@ -135,7 +133,6 @@ public class StartAndLayout extends RelativeLayout {
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 float animatedValue = (float) valueAnimator.getAnimatedValue();
                 mStopButton.setX(animatedValue);
-                mStopButton.requestLayout();
             }
         });
         animatorSet.play(animatorStart).with(animatorStop);
@@ -155,7 +152,6 @@ public class StartAndLayout extends RelativeLayout {
                 hidePauseButton();
                 float animatedValue = (float) valueAnimator.getAnimatedValue();
                 mStartButton.setX(animatedValue);
-                mStartButton.requestLayout();
             }
         });
         ValueAnimator animatorStop=ValueAnimator.ofFloat(mPauseX,mStopX);
@@ -165,7 +161,6 @@ public class StartAndLayout extends RelativeLayout {
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 float animatedValue = (float) valueAnimator.getAnimatedValue();
                 mStopButton.setX(animatedValue);
-                mStopButton.requestLayout();
             }
         });
         animatorSet.play(animatorStart).with(animatorStop);
